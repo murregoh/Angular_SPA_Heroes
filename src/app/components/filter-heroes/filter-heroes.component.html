@@ -1,0 +1,14 @@
+<h1>Searching: <small>{{ param }}</small></h1>
+<hr>
+
+<div class="row" *ngIf="filterHeroes.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info">
+            The Hero doesn't exist
+        </div>
+    </div>
+</div>
+
+<div class="card-columns">
+    <app-heroe-tarjeta [heroe]="heroe" [index]="i" *ngFor="let heroe of filterHeroes; let i = index"></app-heroe-tarjeta>
+</div>
